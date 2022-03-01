@@ -1,0 +1,19 @@
+body {
+    background:url('https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_960_720.jpg');
+    margin:0px;
+    font-family: 'Ubuntu', sans-serif;
+      background-size: 100% 110%;
+  }
+
+h1{
+  text-align: center;
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  /* Height of the footer*/ 
+
+  margin-top: 100px;
+}

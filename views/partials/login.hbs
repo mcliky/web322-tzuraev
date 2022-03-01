@@ -1,0 +1,27 @@
+
+
+<div class="login">
+  <div class="login-header">
+    <h1>Login</h1>
+  </div>
+
+  <form class="login-form" method="post" action="/login">
+     <label for="email"><h3>Email*</h3></label>
+    <input type="text" placeholder="Email" name="email" value="{{values.email}}"><br>
+{{#if validationMessages.email}}
+<span style="color: red; font-size: 12px;">{{validationMessages.email}}</span><br>
+{{/if}}
+  <label for="password"><h3>Password*</h3></label>
+    <input type="password" placeholder="Password" name="password" value="{{values.password}}"><br>
+    {{#if validationMessages.password}}
+<span style="color: red; font-size: 12px;">{{validationMessages.password}}</span><br>
+{{/if}}
+    <br>
+    <input type="submit" value="Login" class="login-button"/>
+    <br>
+    <a class="sign-up">Sign Up!</a>
+    <br>
+    <h6 class="no-access">Can't access your account?</h6>
+    </form>
+  </div>
+

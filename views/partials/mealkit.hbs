@@ -1,0 +1,17 @@
+<div class="row">
+      <h1>Top meals</h1>
+<br>
+  {{#each mealkits}}
+    <div class="columns">
+      <p class="thumbnail_align"> <img style="width: 150px" height="300px" src="/image/{{imageUrl}}" alt="" class="thumbnail"/> </p>
+      <h4>{{title}}</h4>
+      <p><strong>includes:</strong>&nbsp;{{includes}}</p>
+      <p><strong>description: </strong>{{description}}</p>
+      <p><strong>category: </strong>{{category}}</p>
+      <p><strong>price: </strong>{{price}}</p>
+      <p><strong>cooking time: </strong>{{cookingTime}}</p>
+      <p><strong>servings: </strong>{{servings}}</p>
+      <p><strong>calories per serving: </strong>{{caloriesPerServing}}</p>
+    </div>
+    {{/each}}
+  </div>

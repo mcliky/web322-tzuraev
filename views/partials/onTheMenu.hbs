@@ -1,0 +1,89 @@
+{{!-- <div class="container-pricing">
+   <h2 style="text-align: center;" class="menu-group-heading">
+            Meat meals
+          </h2>
+        <div class="menu">
+          {{#each mealsByCategory}}
+          {{categoryName}}
+          {{#if meatMeals}}
+          {{#each mealKits}}
+          <div class="menu-group">
+            <div class="menu-item">
+              <img style="width: 250px; height: 200px" src="/image/{{imageUrl}}" alt="">
+              <div class="menu-item-text">
+                <h3 style="padding-left: 100px;" class="menu-item-heading">
+                  <span class="menu-item-name">{{title}}</span>
+                  <span class="menu-item-price" style="border-radius: 10px;"><a href="#">{{price}}</a></span>
+                </h3>
+                <p class="menu-item-description">Includes: {{includes}} </p>
+                 <p style="padding-left: 20px;" class="menu-item-description">{{description}}</p>
+                <p class="menu-item-description">Cooking time: {{cookingTime}} </p>
+                <p class="menu-item-description">Calories per serving: {{caloriesPerServing}} </p>
+                <p class="menu-item-description">serving: {{servings}} </p>
+              </div>
+            </div>
+            </div>
+                {{/each}}
+                {{/if}}
+                {{/each}}
+                
+            </div>
+            
+            </div>
+
+            <div class="container-pricing">
+   <h2 style="text-align: center;" class="menu-group-heading">
+            Vegan meals
+          </h2>
+        <div class="menu">
+          {{#each mealsByCategory}}
+          {{#if veganMeals}}
+          {{#each mealKits}}
+          <div class="menu-group">
+            <div class="menu-item">
+              <img style="width: 250px; height: 200px" src="/image/{{imageUrl}}" alt="">
+              <div class="menu-item-text" style="align-items: center;">
+                <h3 style="padding-left: 100px;" class="menu-item-heading">
+                  <span class="menu-item-name">{{title}}</span>
+                  <br>
+                  <span class="menu-item-price" ><a href="#">{{price}}</a></span>
+                </h3>
+                 <p class="menu-item-description">Includes: {{includes}} </p>
+          
+                 <p style="padding-left: 20px;" class="menu-item-description">{{description}}</p>
+            
+                <p class="menu-item-description">Cooking time: {{cookingTime}} </p>
+             
+                <p class="menu-item-description">Calories per serving: {{caloriesPerServing}} </p>
+                
+                <p class="menu-item-description">serving: {{servings}} </p>
+              
+              </div>
+            </div>
+            </div>
+                {{/each}}
+                {{/if}}
+                {{/each}}
+                
+            </div>
+            
+            </div> --}}
+
+<div class="row">
+  {{#each mealsByCategory}}
+  <h1>{{categoryName}}</h1>
+          {{#each mealKits}}
+    <div class="columns">
+      <p class="thumbnail_align"> <img style="width: 150px" height="300px" src="/image/{{imageUrl}}" alt="" class="thumbnail"/> </p>
+      <h4>{{title}}</h4>
+      <p><strong>includes:</strong>&nbsp;Italian bread</p>
+      <p><strong>description: </strong>pepperon, tomato paste, mozarella, barbecue sauce</p>
+      <p><strong>category: </strong>meat meals</p>
+      <p><strong>price: </strong>10.99</p>
+      <p><strong>cooking time: </strong>20</p>
+      <p><strong>servings: </strong>1</p>
+      <p><strong>calories per serving: </strong>494</p>
+    </div>
+    {{/each}}
+    {{/each}}
+  </div>
