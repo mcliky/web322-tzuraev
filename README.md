@@ -10,5 +10,5 @@ Course/Section:
 
 ## Project URLs
 
-GitHub Repository: https://github.com/<repo_name>/
-Heroku URL: https://<app_name>.herokuapp.com/
+GitHub Repository: https://github.com/mcliky/web322-tzuraev/
+Heroku URL: https://web322-tzuraev.herokuapp.com/
