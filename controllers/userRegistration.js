@@ -95,24 +95,6 @@ router.post("/sign-up", (req, res) => {
   }
 });
 
-// router.post("/sign-up",(req,res)=>{
-//   const user = new userModel({
-//     firstName: req.body.firstName,
-//     lastName: req.body.lastName,
-//     username: req.body.username,
-//     email: req.body.email,
-//     password: req.body.password,
-//   });
 
-//   user.save()
-//   .then((userSaved)=>{
-//       console.log(`User ${userSaved.firstName} has been added to the database.`);
-//       res.redirect("/login");
-//   })
-//   .catch((err)=>{
-//       console.log(`Error adding user to the database ... ${err}`);
-//       res.redirect("/login");
-//   })
-// });
 
 module.exports = router;

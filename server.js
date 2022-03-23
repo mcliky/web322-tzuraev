@@ -76,4 +76,3 @@ function onHttpStart() {
 
 // setup http server to listen on HTTP_PORT
 app.listen(HTTP_PORT, onHttpStart);
-
