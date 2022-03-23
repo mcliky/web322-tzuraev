@@ -4,8 +4,18 @@
       <nav class="secondary_header" id="menu">
         <img class="logo" src="/logo/logo.svg" alt=""/>
         <ul>
+          {{#if isClerk}}
+          <li><li>Hello {{user.firstName}} {{user.lastName}}!</li></li>
+          <li><a href="/logout">Logout</a></li>
+          {{else}}
+          {{#if user}}
+          <li><li>Hello {{user.firstName}} {{user.lastName}}!</li></li>
+          <li><a href="/logout">Logout</a></li>
+          {{else}}
           <li> <a href="/sign-up">Sign up</a></li>
           <li> <a href="/login"> Login </a></li>
+          {{/if}}
+          {{/if}}
           <li> <a href="/onthemenu"> On the menu </a></li>
           <li><a href="/">Home</a></li>
         </ul>

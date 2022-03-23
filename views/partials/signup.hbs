@@ -1,72 +1,71 @@
-{{!-- <div class="center">
-<h1>Register</h1>
-<form method="post">
-    <div class="txt_field">
-        <input type="text" required>
-        <label>First Name</label>
-        </div>
-        <div class="txt_field">
-            <input type="text" required>
-            <label>Last Name</label>
-            </div>
-            <div class="txt_field">
-                <input type="email" required>
-                <label>Email</label>
-                </div>
-<div class="txt_field">
-<input type="password" required>
-<label>Password</label>
-</div>
-<input type="submit" value="Submit">
-<div class="registration_link">
-
-</div>
-</form>
-   </div> --}}
-
-   <div class="register">
+<div class="register">
   <div class="register-header">
     <h1>Register</h1>
   </div>
-  
 
-    <form class="register-form" method="post" action="/sign-up">
-       <label for="firstName"><h3>First Name*</h3></label>
-    <input type="text" placeholder="Name" name="firstName" value="{{values.firstName}}"><br>
-       {{#if validationMessages.firstName}}
-       <span style="color: red; font-size: 12px;">{{validationMessages.firstName}}</span><br>
-       {{/if}}
-        <label for="lastName"><h3>Last Name*</h3></label>
-     <input type="text" placeholder="Last Name" name="lastName" value="{{values.lastName}}"><br>
-     {{#if validationMessages.lastName}}
-       <span style="color: red; font-size: 12px;">{{validationMessages.lastName}}</span><br>
-       {{/if}}
-       <label for="username"><h3>Username*</h3></label>
-     <input type="text" placeholder="Username" name="username" value="{{values.username}}"><br>
-     {{#if validationMessages.username}}
-       <span style="color: red; font-size: 12px;">{{validationMessages.username}}</span><br>
-       {{/if}}
-    <label for="email"><h3>Email*</h3></label>
-    <input type="text" placeholder="Email" name="email" value="{{values.email}}"><br>
-    {{#if validationMessages.email}}
-       <span style="color: red; font-size: 12px;">{{validationMessages.email}}</span><br>
-       {{/if}}
-    <label for="email"><h3>Password*</h3></label>
-    <input type="password" placeholder="Password" name="password" value="{{values.password}}"><br>
-    {{#if validationMessages.password }}
-       <span style="color: red; font-size: 12px;">{{validationMessages.password}}</span>
+  <form class="register-form" method="post" action="/sign-up">
+    <label for="firstName"><h3>First Name*</h3></label>
+    <input
+      type="text"
+      placeholder="Name"
+      name="firstName"
+      value="{{values.firstName}}"
+    /><br />
+    {{#if validationMessages.firstName}}
+      <span
+        style="color: red; font-size: 12px;"
+      >{{validationMessages.firstName}}</span><br />
     {{/if}}
-    <br>
-    <br>
- <input type="submit" value="submit" class="register-button"/>
-</form>
-  </div>
-
-
-{{!-- <form action="/sign-up" method="post">
-<label for="firstName">First Name</label>
-<input type="text" id="firstName" name="firstName">
-<input type="submit" value="submit">
-
-</form> --}}
-
+    <label for="lastName"><h3>Last Name*</h3></label>
+    <input
+      type="text"
+      placeholder="Last Name"
+      name="lastName"
+      value="{{values.lastName}}"
+    /><br />
+    {{#if validationMessages.lastName}}
+      <span
+        style="color: red; font-size: 12px;"
+      >{{validationMessages.lastName}}</span><br />
+    {{/if}}
+    <label for="username"><h3>Username*</h3></label>
+    <input
+      type="text"
+      placeholder="Username"
+      name="username"
+      value="{{values.username}}"
+    /><br />
+    {{#if validationMessages.username}}
+      <span
+        style="color: red; font-size: 12px;"
+      >{{validationMessages.username}}</span><br />
+    {{/if}}
+    <label for="email"><h3>Email*</h3></label>
+    <input
+      type="text"
+      placeholder="Email"
+      name="email"
+      value="{{values.email}}"
+    /><br />
+    {{#if validationMessages.email}}
+      <span
+        style="color: red; font-size: 12px;"
+      >{{validationMessages.email}}</span><br />
+    {{/if}}
+    <label for="pass"><h3>Password*</h3></label>
+    <input
+      type="password"
+      placeholder="Password"
+      name="password"
+      value="{{values.password}}"
+    /><br />
+    {{#if validationMessages.password}}
+      <span
+        style="color: red; font-size: 12px;"
+      >{{validationMessages.password}}</span>
+    {{/if}}
+    <br />
+    <br />
+    <input type="submit" value="submit" class="register-button" />
+  </form>
+</div>
