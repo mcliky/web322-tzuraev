@@ -1,32 +1,60 @@
 var express = require("express");
 const exphbs= require('express-handlebars');
 var path = require("path");
-
-
+const mongoose = require("mongoose");
+const session = require("express-session");
 
 const dotenv = require('dotenv');
 dotenv.config({ path: "./config/keys.env"});
 
 var app = express();
 
-app.engine('.hbs',exphbs.engine({
-  extname: '.hbs' ,
-  defaultLayout: "main"
+app.engine('.hbs', exphbs({
+  extname: '.hbs',
+  defaultLayout: 'main'
 }));
 
 
 app.set('view engine', '.hbs');
 
-app.use(express.urlencoded({ extended: false }));
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true
+}))
+
+app.use((req, res , next) => {
+res.locals.user = req.session.user;
+res.locals.isClerk = req.session.isClerk;
+next();
+});
+
+app.use(express.urlencoded({ extended: true }));
+
+mongoose.connect(process.env.MONGO_DB_CONN_STRING, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(()=>{
+  console.log("Connected to the MongoDB database.");
+})
+.catch((err)=>{
+  console.log(`There was a problem connect to MongoDB ... ${err}`);
+})
+
 
 app.use(express.static(__dirname + "/public"));
 
 
-const generalController = require("./controllers/general");
-const mealKitsController = require("./controllers/mealKits")
+const generalController = require("./controllers/general.js");
+const mealKitsController = require("./controllers/mealKits");
+const registrationController = require("./controllers/userRegistration");
+const loginController = require("./controllers/userLogin");
 
 app.use("/",mealKitsController);
 app.use("/", generalController);
+app.use("/",registrationController);
+app.use("/",loginController);
 
 
 var HTTP_PORT = process.env.PORT || 8080;
