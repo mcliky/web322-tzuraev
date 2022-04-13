@@ -3,8 +3,11 @@ const exphbs= require('express-handlebars');
 var path = require("path");
 const mongoose = require("mongoose");
 const session = require("express-session");
-
 const dotenv = require('dotenv');
+const fileUpload = require("express-fileupload");
+
+
+
 dotenv.config({ path: "./config/keys.env"});
 
 var app = express();
@@ -25,11 +28,14 @@ app.use(session({
 
 app.use((req, res , next) => {
 res.locals.user = req.session.user;
+res.locals.mealkits=req.session.mealkits;
 res.locals.isClerk = req.session.isClerk;
 next();
 });
 
 app.use(express.urlencoded({ extended: true }));
+
+app.use(fileUpload());
 
 mongoose.connect(process.env.MONGO_DB_CONN_STRING, {
   useNewUrlParser: true,
@@ -50,11 +56,17 @@ const generalController = require("./controllers/general.js");
 const mealKitsController = require("./controllers/mealKits");
 const registrationController = require("./controllers/userRegistration");
 const loginController = require("./controllers/userLogin");
+const loadDataController = require("./controllers/loadData");
+const crudController = require("./controllers/sample");
+const origCrudController = require("./controllers/crud")
 
 app.use("/",mealKitsController);
 app.use("/", generalController);
 app.use("/",registrationController);
 app.use("/",loginController);
+app.use("/",loadDataController);
+app.use("/",crudController);
+app.use("/",origCrudController);
 
 
 var HTTP_PORT = process.env.PORT || 8080;

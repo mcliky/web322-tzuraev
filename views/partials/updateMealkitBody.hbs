@@ -1,0 +1,68 @@
+<div class="register">
+  <div class="register-header">
+    <h1>Update</h1>
+  </div>
+
+  <form class="register-form" method="post" action="/updateMealkit">
+   <label for="searchTitle"><h3>Search for title*</h3></label>
+    <input type="text" placeholder="searchTitle" name="searchTitle" value="{{values.searchTitle}}"/><br />
+       {{#if validationMessages.searchTitle}}
+      <span style="color: red; font-size: 12px;">{{validationMessages.searchTitle}} </span><br />
+    {{/if}}
+    <label for="title"><h3>Title*</h3></label>
+    <input type="text" placeholder="Title" name="title" value="{{values.title}}"/><br />
+    {{#if validationMessages.title}}
+      <span style="color: red; font-size: 12px;">{{validationMessages.title}} </span><br />
+    {{/if}}
+    <label for="includes"><h3>Includes*</h3></label>
+    <input type="text" placeholder="includes" name="includes" value="{{values.includes}}"/><br />
+    {{#if validationMessages.includes}}
+      <span style="color: red; font-size: 12px;">{{validationMessages.includes}}</span><br />
+    {{/if}}
+    <label for="description"><h3>Description*</h3></label>
+    <input type="text" placeholder="description" name="description" value="{{values.description}}"/><br />
+    {{#if validationMessages.description}}
+      <span style="color: red; font-size: 12px;">{{validationMessages.description}}</span><br />
+    {{/if}}
+    <label for="category"><h3>Category*</h3></label>
+    <input type="text" placeholder="category" name="category" value="{{values.category}}"
+    /><br />
+    {{#if validationMessages.category}}
+      <span style="color: red; font-size: 12px;">{{validationMessages.category}}</span><br />
+    {{/if}}
+    <label for="price"><h3>Price*</h3></label>
+    <input type="text" placeholder="price" name="price" value="{{values.price}}"/><br />
+    {{#if validationMessages.price}}
+      <span style="color: red; font-size: 12px;">{{validationMessages.price}}</span>
+    {{/if}}
+    <label for="cookingTime"><h3>CookingTime*</h3></label>
+    <input type="text" placeholder="cookingTime" name="cookingTime" value="{{values.cookingTime}}"/><br />
+    {{#if validationMessages.cookingTime}}
+      <span style="color: red; font-size: 12px;">{{validationMessages.cookingTime}}</span>
+    {{/if}}
+    <label for="servings"><h3>Servings*</h3></label>
+    <input type="text" placeholder="servings" name="servings" value="{{values.servings}}"/><br />
+    {{#if validationMessages.servings}}
+      <span style="color: red; font-size: 12px;">{{validationMessages.servings}}</span>
+    {{/if}}
+    <label for="caloriesPerServing"><h3>Calories per serving*</h3></label>
+    <input type="text" placeholder="caloriesPerServing" name="caloriesPerServing" value="{{values.caloriesPerServing}}"/><br />
+    {{#if validationMessages.caloriesPerServing}}
+      <span style="color: red; font-size: 12px;">{{validationMessages.caloriesPerServing}}</span>
+    {{/if}}
+    <br>
+    <br>
+     <label for="image">Upload image</label>
+     <input type="file" name="mealKitPic" accept=".gif,.jpg,.jpeg,.png" value="{{values.mealKitPic}}"/>
+    {{#if validationMessages.mealKitPic}}
+      <span style="color: red; font-size: 12px;">{{validationMessages.mealKitPic}}</span>
+    {{/if}}
+    <br>
+    <br>
+    <label for="isTopMeal" style="font-size: 12px;">TopMeal*</label>
+    <input name="isTopMeal" type="checkbox" value="true" />
+    <br />
+    <br />
+    <input type="submit" value="submit" class="register-button" />
+  </form>
+</div>

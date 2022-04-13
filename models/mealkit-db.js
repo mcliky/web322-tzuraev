@@ -1,4 +1,4 @@
-let mealkits=[
+let mealkitsDB=[
     {
     title: "Veggie pizza",
     includes: "Greek salad",
@@ -88,11 +88,15 @@ let mealkits=[
 }];
 
 
+module.exports.getAllMeals=()=>{
+    return mealkitsDB;
+}
+
 module.exports.getTopMeals=()=>{
     let topMeals=[];
-    for(let i=0;i<mealkits.length;i++){
-        if(mealkits[i].topMeal){
-            topMeals.push(mealkits[i]);
+    for(let i=0;i<mealkitsDB.length;i++){
+        if(mealkitsDB[i].topMeal){
+            topMeals.push(mealkitsDB[i]);
         }
     }
 return topMeals;
@@ -110,16 +114,17 @@ module.exports.getMealsByCategory=()=>{
         veganMeals:true,
         mealKits:[]
     }];
-    for(let i=0;i<mealkits.length;i++){
-        if(mealkits[i].category.includes("Meat")){
+    for(let i=0;i<mealkitsDB.length;i++){
+        if(mealkitsDB[i].category.includes("Meat")){
 
-    mealsByCategory[0].mealKits.push(mealkits[i]);
+    mealsByCategory[0].mealKits.push(mealkitsDB[i]);
         }
         else{
-    mealsByCategory[1].mealKits.push(mealkits[i]);
+    mealsByCategory[1].mealKits.push(mealkitsDB[i]);
         }
     }
     
     return mealsByCategory;
    
 }
+

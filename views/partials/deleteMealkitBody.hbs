@@ -1,0 +1,16 @@
+<div class="register">
+  <div class="register-header">
+    <h1>Delete</h1>
+  </div>
+
+  <form class="register-form" method="post" action="/deleteMealkits">
+    <label for="title"><h3>Title*</h3></label>
+    <input type="text" placeholder="Title" name="title" value="{{values.title}}"/><br />
+    {{#if validationMessages.title}}
+      <span style="color: red; font-size: 12px;">{{validationMessages.title}} </span><br />
+    {{/if}}
+    <br>
+    <br>
+    <input type="submit" value="submit" class="register-button" />
+  </form>
+</div>
