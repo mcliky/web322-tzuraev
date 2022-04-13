@@ -3,7 +3,7 @@
     <h1>Create</h1>
   </div>
 
-  <form class="register-form" method="post" action="/createMealkit">
+  <form class="register-form" method="post" action="/createMealkit" enctype="multipart/form-data">
     <label for="title"><h3>Title*</h3></label>
     <input type="text" placeholder="Title" name="title" value="{{values.title}}"/><br />
     {{#if validationMessages.title}}

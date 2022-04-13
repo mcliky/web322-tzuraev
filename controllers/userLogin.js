@@ -2,10 +2,11 @@ const express = require("express");
 const userModel = require("../models/userInfo");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
+const mealkitModel = require("../models/mealkitsmodel");
 
 router.get("/allMealkits", function (req, res) {
   if(req.session.isClerk){
-  mealkitsModel.find({},(error,data)=>{
+  mealkitModel.find({},(error,data)=>{
     if(error){
       console.log(error);
     }
