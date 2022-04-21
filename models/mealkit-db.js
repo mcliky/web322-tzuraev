@@ -8,7 +8,7 @@ let mealkitsDB=[
     cookingTime: 15,
     servings: 1,
     caloriesPerServing: 700,
-    imageUrl: "pizza-6149630_960_720.jpg",
+    mealKitPic: "pizza-6149630_960_720.jpg",
     topMeal: true
   },
 
@@ -21,7 +21,7 @@ let mealkitsDB=[
     cookingTime: 20,
     servings: 1,
     caloriesPerServing: 2110,
-    imageUrl: "pizza-4220756_960_720.jpg",
+    mealKitPic: "pizza-4220756_960_720.jpg",
     topMeal: true
 
 },
@@ -35,7 +35,7 @@ let mealkitsDB=[
     cookingTime: 25,
     servings: 1,
     caloriesPerServing: 1451,
-    imageUrl: "sauces-2798897_960_720.jpg",
+    mealKitPic: "sauces-2798897_960_720.jpg",
     topMeal: true
 },
 {
@@ -47,7 +47,7 @@ let mealkitsDB=[
     cookingTime: 10,
     servings: 1,
     caloriesPerServing: 820,
-    imageUrl: "00647564-Whole-Mushroom-Pizza-on-Pie-Plate.jpg",
+    mealKitPic: "00647564-Whole-Mushroom-Pizza-on-Pie-Plate.jpg",
     topMeal: false
 },
 {
@@ -59,7 +59,7 @@ let mealkitsDB=[
     cookingTime: 10,
     servings: 1,
     caloriesPerServing: 400,
-    imageUrl: "pizza-on-brown-wooden-table.jpg",
+    mealKitPic: "pizza-on-brown-wooden-table.jpg",
     topMeal: false
 },
 {
@@ -71,7 +71,7 @@ let mealkitsDB=[
     cookingTime: 15,
     servings: 1,
     caloriesPerServing: 760,
-    imageUrl: "sausage-pepper-personal-pizzas-close-up-hero.jpg",
+    mealKitPic: "sausage-pepper-personal-pizzas-close-up-hero.jpg",
     topMeal: false
 },
 {
@@ -83,7 +83,7 @@ let mealkitsDB=[
     cookingTime: 10,
     servings: 1,
     caloriesPerServing: 494,
-    imageUrl: "pepperoni-pizza-ck-x.jpg",
+    mealKitPic: "pepperoni-pizza-ck-x.jpg",
     topMeal: false
 }];
 

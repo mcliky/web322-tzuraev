@@ -79,6 +79,7 @@ router.post("/createMealkit", (req, res) => {
       validationMessages.caloriesPerServing = "Calories are not valid";
   }
   if (isValid) {
+    console.log(req.files);
     const mealkit = new mealkitModel({
       title: title,
       includes: includes,
@@ -95,7 +96,6 @@ router.post("/createMealkit", (req, res) => {
       .then((mealkitSaved) => {
           // mealkit was saved correctly.
           console.log(`Mealkit ${mealkitSaved.title} has been added to the database.`);
-          console.log(`req.files = "${req.files}"`);
           // Create a unique name for the image, so that it can be saved in the file system.
           let uniqueName = `mealkit-pic-${mealkitSaved._id}${path.parse(req.files.mealKitPic.name).ext}`;
           

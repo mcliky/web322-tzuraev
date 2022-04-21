@@ -67,6 +67,7 @@ app.use("/",loginController);
 app.use("/",loadDataController);
 app.use("/",crudController);
 app.use("/",origCrudController);
+app.use("/mealkits",mealKitsController);
 
 
 var HTTP_PORT = process.env.PORT || 8080;

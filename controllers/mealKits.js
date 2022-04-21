@@ -3,6 +3,48 @@ const router = express.Router();
 const mealkitsModel = require("../models/mealkitsmodel");
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+router.get('/info/:id', async(req, res, next) => {
+  var id = req.params.id;
+
+
+    mealkitsModel.find({_id:id})
+    .exec()
+    .then(data => {
+        // Pull the data (exclusively)
+        // This is to ensure that our "data" object contains the returned data (only) and nothing else.
+        data = data.map(value => value.toObject());
+   
+      
+
+      res.render('general/mealkits', {data:data});
+     
+    
+   });
+});
+
+
+
+
+
+
+
+
 router.get("/onthemenu", function (req, res) {
 
 

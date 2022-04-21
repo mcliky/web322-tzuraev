@@ -1,0 +1,51 @@
+<div class="shopping-cart">
+  <!-- Title -->
+  <div class="title">
+    Shopping Bag
+  </div>
+ 
+  <!-- Product #1 -->
+ {{#if hasMeals}}
+  {{#each meals}}
+  
+  <br>
+  Item number: {{@index}} <br>
+  
+  <div class="item">
+  <div class="buttons">
+      <span class="delete-btn"></span>
+      <span class="like-btn"></span>
+    </div>
+    <div class="image">
+      <img src="{{mealKitPic}}" alt="" />
+    </div>
+ 
+    <div class="description">
+      <span>{{data.title}}</span>
+    </div>
+ 
+    <div class="quantity">
+      <button class="plus-btn" type="button" name="button"><a href="/add-meal/{{id}}" class="plus-btn">+</a></button>
+      <input type="text" name="name" value="{{qty}}">
+      <button class="minus-btn" type="button" name="button"><a href="/remove-meal/{{id}}" class="minus-btn">-</a></button>
+    </div>
+ 
+    <div class="total-price">{{data.price}}</div>
+    <div class="total-price">{{quantityPrice}}</div>
+  </div>
+  {{/each}}
+ Cart total: {{cartTotal}}
+ {{/if}}
+</div> 
+
+
+<script>
+    window.setInterval('refresh()', 2000); 	
+    // Call a function every 10000 milliseconds 
+    // (OR 10 seconds).
+
+    // Refresh or reload page.
+    function refresh() {
+        window .location.reload();
+    }
+</script>

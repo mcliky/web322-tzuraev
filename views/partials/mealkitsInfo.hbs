@@ -1,0 +1,15 @@
+<div class="row">
+      <h1>Description</h1>
+<br>
+{{#each data}}
+    <div class="columns">
+      <p style="position:relative; left: 400px;"> <img style="border:solid 1px black;width: 1000px; height: 600px " src="/image/{{mealKitPic}}" alt="" /> </p>
+      <h4 style="position:relative; left: 870px;color:black;font-size:20px">{{title}}</h4>
+      <p style="position:relative; left: 700px;color:black;font-size:20px">This pizza is made of {{description}}.</p>
+      <p style="position:relative; left: 700px;color:black;font-size:20px">It can be served up to ({{servings}}) times and cooked for {{cookingTime}} minutes.</p>
+      <p style="position:relative; left: 700px;color:black;font-size:20px">This meal is {{caloriesPerServing}} calories.</p>
+      <p style="position:relative; left: 700px;color:black;font-size:20px">Price - {{price}}$</p>
+      <button style="position:relative; left: 880px;" class="button">  <a href="/add-meal/{{_id}}">Add to order </a></button>
+    </div>
+{{/each}}
+  </div>

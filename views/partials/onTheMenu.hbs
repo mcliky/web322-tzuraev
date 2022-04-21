@@ -3,7 +3,9 @@
   <h1>{{categoryName}}</h1>
   {{#each mealKits}}
     <div class="columns">
-      <p class="thumbnail_align"> <img style="width: 150px" height="300px" src="/image/{{imageUrl}}" alt="" class="thumbnail"/> </p>
+      <a href="/mealkits/info/{{_id}}" >
+      <p class="thumbnail_align"> <img style="width: 150px" height="300px" src="/image/{{mealKitPic}}" alt="" class="thumbnail"/> </p>
+      </a>
       <h4>{{title}}</h4>
       <p><strong>includes:</strong>&nbsp;{{includes}}</p>
       <p><strong>description: </strong>{{description}}</p>

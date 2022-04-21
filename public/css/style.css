@@ -17,7 +17,10 @@ nav a{
 	text-decoration: none;
 	color: white;
 }
-
+a{
+	text-decoration: none;
+	color: black;
+}
 .tutorial > h1{
 	padding-left:10px; 
 	font-size: 25px;
@@ -162,7 +165,23 @@ background-position: center center;
 background-repeat: no-repeat;
 background-attachment: fixed;
 }
+.button {
+	background-color: #dee200;
+	border: none;
+	color: rgb(0, 0, 0);
+	padding: 10px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 8px;
+  }
 
+.button:hover{
+	background-color: #d8da7d;
+}
 .hero h1 {
 
 font-size: 5em;
